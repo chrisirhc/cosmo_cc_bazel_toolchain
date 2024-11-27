@@ -32,12 +32,7 @@ package(default_visibility = ["//visibility:public"])
 
 filegroup(
     name = "x86_64-full",
-    srcs = [
-        "//:x86_64-bin",
-        "//:libexec/gcc/x86_64-linux-cosmo/14.1.0",
-        "//:include",
-        "//:x86_64-lib",
-    ],
+    srcs = glob(["**/*"]),
 )
 
 # include
@@ -69,8 +64,8 @@ filegroup(
 )
 
 filegroup(name = "x86_64-ar", srcs = ["bin/x86_64-linux-cosmo-ar"])
-filegroup(name = "x86_64-gcc", srcs = ["bin/x86_64-linux-cosmo-gcc"])
-filegroup(name = "x86_64-g++", srcs = ["bin/x86_64-linux-cosmo-g++"])
+filegroup(name = "x86_64-gcc", srcs = ["bin/x86_64-unknown-cosmo-cc"])
+filegroup(name = "x86_64-g++", srcs = ["bin/x86_64-unknown-cosmo-c++"])
 filegroup(name = "x86_64-strip", srcs = ["bin/x86_64-linux-cosmo-strip"])
 filegroup(name = "x86_64-objcopy", srcs = ["bin/x86_64-linux-cosmo-objcopy"])
 filegroup(name = "x86_64-objdump", srcs = ["bin/x86_64-linux-cosmo-objdump"])
@@ -92,6 +87,8 @@ filegroup(
     name = "libexec/gcc/x86_64-linux-cosmo/14.1.0",
     srcs = glob(["libexec/gcc/x86_64-linux-cosmo/14.1.0/**/*"]),
 )
+
+filegroup(name = "x86_64-ld.bfd", srcs = ["libexec/gcc/x86_64-linux-cosmo/14.1.0/ld.bfd"])
 
 alias(name = "x86_64-ld", actual = ":x86_64-ld.bfd")
 
