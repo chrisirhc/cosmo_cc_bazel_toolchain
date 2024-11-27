@@ -90,20 +90,8 @@ alias(name = "x86_64-cpp", actual = ":x86_64-gcc")
 
 filegroup(
     name = "libexec/gcc/x86_64-linux-cosmo/14.1.0",
-    srcs = [
-        "x86_64-as",
-        "x86_64-cc1",
-        "x86_64-cc1plus",
-        "x86_64-collect2",
-        "x86_64-ld.bfd",
-    ],
+    srcs = glob(["libexec/gcc/x86_64-linux-cosmo/14.1.0/**/*"]),
 )
-
-filegroup(name = "x86_64-as", srcs = ["libexec/gcc/x86_64-linux-cosmo/14.1.0/as"])
-filegroup(name = "x86_64-cc1", srcs = ["libexec/gcc/x86_64-linux-cosmo/14.1.0/cc1"])
-filegroup(name = "x86_64-cc1plus", srcs = ["libexec/gcc/x86_64-linux-cosmo/14.1.0/cc1plus"])
-filegroup(name = "x86_64-collect2", srcs = ["libexec/gcc/x86_64-linux-cosmo/14.1.0/collect2"])
-filegroup(name = "x86_64-ld.bfd", srcs = ["libexec/gcc/x86_64-linux-cosmo/14.1.0/ld.bfd"])
 
 alias(name = "x86_64-ld", actual = ":x86_64-ld.bfd")
 
@@ -111,38 +99,11 @@ alias(name = "x86_64-ld", actual = ":x86_64-ld.bfd")
 
 filegroup(
     name = "x86_64-lib",
-    srcs = [
-        ":x86_64-ape-no-modify-self.o",
-        ":x86_64-ape.lds",
-        ":x86_64-ape.o",
-        ":x86_64-crt.o",
-        ":x86_64-libc.a",
-        ":x86_64-libcosmo.a",
-        ":x86_64-libcxx.a",
-        ":x86_64-libdl.a",
-        ":x86_64-libgcc_s.a",
-        ":x86_64-libm.a",
-        ":x86_64-libpthread.a",
-        ":x86_64-libresolv.a",
-        ":x86_64-librt.a",
-        ":x86_64-libstdc++.a",
-    ],
+    srcs = glob(["x86_64-linux-cosmo/lib/**/*"]),
 )
 
-filegroup(name = "x86_64-ape-no-modify-self.o", srcs = ["x86_64-linux-cosmo/lib/ape-no-modify-self.o"])
-filegroup(name = "x86_64-ape.lds", srcs = ["x86_64-linux-cosmo/lib/ape.lds"])
-filegroup(name = "x86_64-ape.o", srcs = ["x86_64-linux-cosmo/lib/ape.o"])
-filegroup(name = "x86_64-crt.o", srcs = ["x86_64-linux-cosmo/lib/crt.o"])
-filegroup(name = "x86_64-libc.a", srcs = ["x86_64-linux-cosmo/lib/libc.a"])
-filegroup(name = "x86_64-libcosmo.a", srcs = ["x86_64-linux-cosmo/lib/libcosmo.a"])
-filegroup(name = "x86_64-libcxx.a", srcs = ["x86_64-linux-cosmo/lib/libcxx.a"])
-filegroup(name = "x86_64-libdl.a", srcs = ["x86_64-linux-cosmo/lib/libdl.a"])
-filegroup(name = "x86_64-libgcc_s.a", srcs = ["x86_64-linux-cosmo/lib/libgcc_s.a"])
-filegroup(name = "x86_64-libm.a", srcs = ["x86_64-linux-cosmo/lib/libm.a"])
-filegroup(name = "x86_64-libpthread.a", srcs = ["x86_64-linux-cosmo/lib/libpthread.a"])
-filegroup(name = "x86_64-libresolv.a", srcs = ["x86_64-linux-cosmo/lib/libresolv.a"])
-filegroup(name = "x86_64-librt.a", srcs = ["x86_64-linux-cosmo/lib/librt.a"])
 filegroup(name = "x86_64-libstdc++.a", srcs = ["x86_64-linux-cosmo/lib/libstdc++.a"])
+
     """,
     sha256 = "3f559555d08ece35bab1a66293a2101f359ac9841d563419756efa9c79f7a150",
     url = "https://github.com/jart/cosmopolitan/releases/download/3.9.7/cosmocc-3.9.7.zip",
