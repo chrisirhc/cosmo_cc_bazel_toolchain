@@ -57,7 +57,7 @@ cc_toolchain_config(
         "-D__COSMOPOLITAN__",
         "-D__COSMOCC__",
         "-D__FATCOSMOCC__",
-        "-mno-tls-direct-seg-refs",
+        # "-mno-tls-direct-seg-refs",
         # "-ffixed-x18", # platform-specific
         # "-ffixed-x28", # platform-specific
         # "-mno-outline-atomics", # platform-specific
@@ -75,8 +75,8 @@ cc_toolchain_config(
     dbg_compile_flags = ["-g"],
     host_system_name = "local",
     link_flags = [
-        "-Lexternal/cosmocc/x86_64-linux-cosmo/lib",
-        "-Texternal/cosmocc/x86_64-linux-cosmo/lib/ape.lds",
+        "-Lexternal/cosmocc/aarch64-linux-cosmo/lib",
+        # "-Texternal/cosmocc/aarch64-linux-cosmo/lib/ape.lds",
         "-zcommon-page-size=4096",
         "-zmax-page-size=16384",
         "-no-as-needed",
@@ -93,9 +93,9 @@ cc_toolchain_config(
         "-lresolv",
         "-lrt",
         "-lstdc++",
-        # "external/cosmocc/x86_64-linux-cosmo/lib/ape-no-modify-self.o",
-        "external/cosmocc/x86_64-linux-cosmo/lib/ape.o",
-        "external/cosmocc/x86_64-linux-cosmo/lib/crt.o",
+        # "external/cosmocc/aarch64-linux-cosmo/lib/ape-no-modify-self.o",
+        # "external/cosmocc/aarch64-linux-cosmo/lib/ape.o",
+        "external/cosmocc/aarch64-linux-cosmo/lib/crt.o",
     ],
     opt_compile_flags = [
         "-O2",

@@ -63,19 +63,19 @@ filegroup(
     ],
 )
 
-filegroup(name = "x86_64-ar", srcs = ["bin/x86_64-linux-cosmo-ar"])
-filegroup(name = "x86_64-gcc", srcs = ["bin/x86_64-unknown-cosmo-cc"])
-filegroup(name = "x86_64-g++", srcs = ["bin/x86_64-unknown-cosmo-c++"])
-filegroup(name = "x86_64-strip", srcs = ["bin/x86_64-linux-cosmo-strip"])
-filegroup(name = "x86_64-objcopy", srcs = ["bin/x86_64-linux-cosmo-objcopy"])
-filegroup(name = "x86_64-objdump", srcs = ["bin/x86_64-linux-cosmo-objdump"])
-filegroup(name = "x86_64-addr2line", srcs = ["bin/x86_64-linux-cosmo-addr2line"])
-filegroup(name = "x86_64-elfedit", srcs = ["bin/x86_64-linux-cosmo-elfedit"])
-filegroup(name = "x86_64-nm", srcs = ["bin/x86_64-linux-cosmo-nm"])
-filegroup(name = "x86_64-ranlib", srcs = ["bin/x86_64-linux-cosmo-ranlib"])
-filegroup(name = "x86_64-readelf", srcs = ["bin/x86_64-linux-cosmo-readelf"])
-filegroup(name = "x86_64-size", srcs = ["bin/x86_64-linux-cosmo-size"])
-filegroup(name = "x86_64-c++filt", srcs = ["bin/x86_64-linux-cosmo-c++filt"])
+filegroup(name = "x86_64-ar", srcs = ["bin/aarch64-linux-cosmo-ar"])
+filegroup(name = "x86_64-gcc", srcs = ["bin/unknown-unknown-cosmo-cc"])
+filegroup(name = "x86_64-g++", srcs = ["bin/unknown-unknown-cosmo-c++"])
+filegroup(name = "x86_64-strip", srcs = ["bin/aarch64-linux-cosmo-strip"])
+filegroup(name = "x86_64-objcopy", srcs = ["bin/aarch64-linux-cosmo-objcopy"])
+filegroup(name = "x86_64-objdump", srcs = ["bin/aarch64-linux-cosmo-objdump"])
+filegroup(name = "x86_64-addr2line", srcs = ["bin/aarch64-linux-cosmo-addr2line"])
+filegroup(name = "x86_64-elfedit", srcs = ["bin/aarch64-linux-cosmo-elfedit"])
+filegroup(name = "x86_64-nm", srcs = ["bin/aarch64-linux-cosmo-nm"])
+filegroup(name = "x86_64-ranlib", srcs = ["bin/aarch64-linux-cosmo-ranlib"])
+filegroup(name = "x86_64-readelf", srcs = ["bin/aarch64-linux-cosmo-readelf"])
+filegroup(name = "x86_64-size", srcs = ["bin/aarch64-linux-cosmo-size"])
+filegroup(name = "x86_64-c++filt", srcs = ["bin/aarch64-linux-cosmo-c++filt"])
 
 alias(name = "x86_64-c++", actual = ":x86_64-g++")
 alias(name = "x86_64-cc", actual = ":x86_64-gcc")
@@ -84,11 +84,11 @@ alias(name = "x86_64-cpp", actual = ":x86_64-gcc")
 # libexec
 
 filegroup(
-    name = "libexec/gcc/x86_64-linux-cosmo/14.1.0",
-    srcs = glob(["libexec/gcc/x86_64-linux-cosmo/14.1.0/**/*"]),
+    name = "libexec/gcc/aarch64-linux-cosmo/14.1.0",
+    srcs = glob(["libexec/gcc/aarch64-linux-cosmo/14.1.0/**/*"]),
 )
 
-filegroup(name = "x86_64-ld.bfd", srcs = ["libexec/gcc/x86_64-linux-cosmo/14.1.0/ld.bfd"])
+filegroup(name = "x86_64-ld.bfd", srcs = ["libexec/gcc/aarch64-linux-cosmo/14.1.0/ld.bfd"])
 
 alias(name = "x86_64-ld", actual = ":x86_64-ld.bfd")
 
