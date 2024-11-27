@@ -63,7 +63,7 @@ cc_toolchain_config(
         # "-mno-outline-atomics", # platform-specific
         "-fno-omit-frame-pointer",
     ],
-    compiler = "cosmo_cc-11.2.0",
+    compiler = "cosmo_cc-14.1.0",
     coverage_compile_flags = ["--coverage"],
     coverage_link_flags = ["--coverage"],
     cpu = "k8",

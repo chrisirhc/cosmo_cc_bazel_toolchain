@@ -34,7 +34,7 @@ filegroup(
     name = "x86_64-full",
     srcs = [
         "//:x86_64-bin",
-        "//:libexec/gcc/x86_64-linux-cosmo/11.2.0",
+        "//:libexec/gcc/x86_64-linux-cosmo/14.1.0",
         "//:include",
         "//:x86_64-lib",
     ],
@@ -89,7 +89,7 @@ alias(name = "x86_64-cpp", actual = ":x86_64-gcc")
 # libexec
 
 filegroup(
-    name = "libexec/gcc/x86_64-linux-cosmo/11.2.0",
+    name = "libexec/gcc/x86_64-linux-cosmo/14.1.0",
     srcs = [
         "x86_64-as",
         "x86_64-cc1",
@@ -99,11 +99,11 @@ filegroup(
     ],
 )
 
-filegroup(name = "x86_64-as", srcs = ["libexec/gcc/x86_64-linux-cosmo/11.2.0/as"])
-filegroup(name = "x86_64-cc1", srcs = ["libexec/gcc/x86_64-linux-cosmo/11.2.0/cc1"])
-filegroup(name = "x86_64-cc1plus", srcs = ["libexec/gcc/x86_64-linux-cosmo/11.2.0/cc1plus"])
-filegroup(name = "x86_64-collect2", srcs = ["libexec/gcc/x86_64-linux-cosmo/11.2.0/collect2"])
-filegroup(name = "x86_64-ld.bfd", srcs = ["libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd"])
+filegroup(name = "x86_64-as", srcs = ["libexec/gcc/x86_64-linux-cosmo/14.1.0/as"])
+filegroup(name = "x86_64-cc1", srcs = ["libexec/gcc/x86_64-linux-cosmo/14.1.0/cc1"])
+filegroup(name = "x86_64-cc1plus", srcs = ["libexec/gcc/x86_64-linux-cosmo/14.1.0/cc1plus"])
+filegroup(name = "x86_64-collect2", srcs = ["libexec/gcc/x86_64-linux-cosmo/14.1.0/collect2"])
+filegroup(name = "x86_64-ld.bfd", srcs = ["libexec/gcc/x86_64-linux-cosmo/14.1.0/ld.bfd"])
 
 alias(name = "x86_64-ld", actual = ":x86_64-ld.bfd")
 
@@ -126,7 +126,6 @@ filegroup(
         ":x86_64-libresolv.a",
         ":x86_64-librt.a",
         ":x86_64-libstdc++.a",
-        ":x86_64-libz.a",
     ],
 )
 
@@ -144,8 +143,7 @@ filegroup(name = "x86_64-libpthread.a", srcs = ["x86_64-linux-cosmo/lib/libpthre
 filegroup(name = "x86_64-libresolv.a", srcs = ["x86_64-linux-cosmo/lib/libresolv.a"])
 filegroup(name = "x86_64-librt.a", srcs = ["x86_64-linux-cosmo/lib/librt.a"])
 filegroup(name = "x86_64-libstdc++.a", srcs = ["x86_64-linux-cosmo/lib/libstdc++.a"])
-filegroup(name = "x86_64-libz.a", srcs = ["x86_64-linux-cosmo/lib/libz.a"])
     """,
-    sha256 = "d2fa6dbf6f987310494581deff5b915dbdc5ca701f20f7613bb0dcf1de2ee511",
-    url = "https://github.com/jart/cosmopolitan/releases/download/3.2.4/cosmocc-3.2.4.zip",
+    sha256 = "3f559555d08ece35bab1a66293a2101f359ac9841d563419756efa9c79f7a150",
+    url = "https://github.com/jart/cosmopolitan/releases/download/3.9.7/cosmocc-3.9.7.zip",
 )
